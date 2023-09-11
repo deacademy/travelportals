@@ -79,10 +79,8 @@ https://s3.amazonaws.com/amazon-reviews-pds/readme.html
 ## Athena table schema:->
 HOTEL_NAME string, RATING string,  REVIEW_LEVEL string, REVIEW_COUNT string, AMENTINIES string, #FEATURES string,  HOTEL_LOCATION string, CONTACT_NUMBER string, NEARLY_LANDMARK_POINTS string, #HOTEL_PAGE_URL string, HOTEL_LISTING_PAGE_URL string
 
+
 <!-- ssh-keygen -t rsa -b 4096 -C "sovan@dataengineeracademy.com" -->
 <!-- git config --local user.name "sovan"
 <!-- git config --local  user.email "sovan@dataengineeracademy.com" --> -->
 <!-- git remote add origin git@github.com:deacademy/travelportals.git -->
-
-
-
