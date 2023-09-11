@@ -1,5 +1,5 @@
 # travelportals
-Educational project to scrape data from trustable sites and execute over AWS lambda for analyzing through the AWS Atena service
+Educational project to scrape data from trustable sites and execute over AWS lambda for querying scraped data through the AWS Atena service
 
 
 # Install user-agent package to use fake user agents to bypass restrictions ->
@@ -42,38 +42,42 @@ def get_proxy_url(url):
 # DOC LINK:: https://scrapeops.io/python-scrapy-playbook/scrapy-save-aws-s3/
 
 
-## TEST DOCKER IN LOCAL SYSTEM ##
- ## docker run -p 9000:8080 travelportals_scrape_repo
- ## docker kill 9000
- ## Remove-item alias:curl
- ## curl "http://localhost:9000/2015-03-31/functions/function/invocations" -d '{}'
+## RUN DOCKER SERVER IN LOCAL SYSTEM ##
+ >> docker run -p 9000:8080 travelportals_scrape_repo
+ RUN BELOW TO STOP THE SERVER:
+ >> docker kill 9000
+
+## INVOKE DOCKER SERVER IN LOCAL SYSTEM ##
+ >> curl "http://localhost:9000/2015-03-31/functions/function/invocations" -d '{}'
+ RUN BELOW IN CASE OF FAILURE:
+ >> Remove-item alias:curl
 
 ## DEPLOY DOCKER FROM LOCAL TO AWS ECR ##
- ## aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 294845879996.dkr.ecr.us-east-1.amazonaws.com
- ## docker build -t travelportals_scrape_repo . ##linux/arm64 -f
- ## docker tag travelportals_scrape_repo:latest 294845879996.dkr.ecr.us-east-1.amazonaws.com/travelportals_scrape_repo:latest
- ## docker push 294845879996.dkr.ecr.us-east-1.amazonaws.com/travelportals_scrape_repo:latest
+ 1. aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 294845879996.dkr.ecr.us-east-1.amazonaws.com
+ 2. docker build -t travelportals_scrape_repo .
+ 3. docker tag travelportals_scrape_repo:latest 294845879996.dkr.ecr.us-east-1.amazonaws.com/travelportals_scrape_repo:latest
+ 4. docker push 294845879996.dkr.ecr.us-east-1.amazonaws.com/travelportals_scrape_repo:latest
 
 ## Dokcer commands - ##
  ## Create docker image
- # >> docker build -t travelportals_scrape_repo .
+   >> docker build -t travelportals_scrape_repo .
  ## Create docker container 
- # >> docker run -d travelportals_scrape_repo
+   >> docker run -d travelportals_scrape_repo
  ## Enter into docker container 
- # >> docker exec -it 12980446b215  /bin/bash
+   >> docker exec -it 12980446b215  /bin/bash
  ## Command to remove all runinng and not running images in docker server ->
- # >> docker rmi -f $(docker images -aq)
+   >> docker rmi -f $(docker images -aq)
  ## Command to remove all runinng and not running image containers in docker server ->
- # >> docker rm -f $(docker ps -aq)
+   >> docker rm -f $(docker ps -aq)
 
 
 ## Exaample site to download mock data site ->
-# https://mockaroo.com/
-# https://s3.amazonaws.com/amazon-reviews-pds/readme.html
+https://mockaroo.com/
+https://s3.amazonaws.com/amazon-reviews-pds/readme.html
 
 ## Athena table name: tripadvisor_db.trip_advisor_hotels
 ## Athena table schema:->
- # HOTEL_NAME string, RATING string,  REVIEW_LEVEL string, REVIEW_COUNT string, AMENTINIES string, #FEATURES string,  HOTEL_LOCATION string, CONTACT_NUMBER string, NEARLY_LANDMARK_POINTS string, #HOTEL_PAGE_URL string, HOTEL_LISTING_PAGE_URL string
+HOTEL_NAME string, RATING string,  REVIEW_LEVEL string, REVIEW_COUNT string, AMENTINIES string, #FEATURES string,  HOTEL_LOCATION string, CONTACT_NUMBER string, NEARLY_LANDMARK_POINTS string, #HOTEL_PAGE_URL string, HOTEL_LISTING_PAGE_URL string
 
 
 <!-- ssh-keygen -t rsa -b 4096 -C "sovan@dataengineeracademy.com" -->
