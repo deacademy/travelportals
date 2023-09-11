@@ -4,7 +4,7 @@ Educational project to scrape data from trustable sites and execute over AWS lam
 You you want to download the source code in your local system through git command then make sure you have git versioning tool installed in your local system.
 you can use below command to download source code from master branch in your local system using git command.
 >> git clone --branch master https://github.com/deacademy/travelportals.git
->> 
+
 # Install user-agent package to use fake user agents to bypass restrictions ->
 pip install scrapy-user-agents
 
