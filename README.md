@@ -1,7 +1,7 @@
 # travelportals
 Educational project to scrape data from trustable sites and execute over AWS lambda for querying scraped data through the AWS Atena service
 
-Before you download the source code in your local system, make sure you have git versioning tool installed in your local system.
+You you want to download the source code in your local system through git command then make sure you have git versioning tool installed in your local system.
 you can use below command to download source code from master branch in your local system using git command.
 >> git clone --branch master https://github.com/deacademy/travelportals.git
 
