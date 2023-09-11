@@ -4,9 +4,9 @@ FROM public.ecr.aws/lambda/python:3.11
 WORKDIR ${LAMBDA_TASK_ROOT}
 
 #Copy the file from the local host to the filesystem of the container at the working directory.
-COPY requirements.txt .
+COPY requirements_lambda.txt .
 #Install Scrapy specified in requirements.txt.
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements_lambda.txt
 
 #scrape all files in root directory
 COPY . .
