@@ -31,7 +31,7 @@ DOWNLOADER_MIDDLEWARES = {
 }
 
 ## Copy/paste following line of code in your spider to use fake proxies ->
-API_KEY = 'd99eff6b-ab58-4fdc-8664-68a4252c8edf'
+API_KEY = '************************************'
 
 def get_proxy_url(url):
     # logging.info(f'Scrape url:: {url}')
