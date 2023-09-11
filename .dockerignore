@@ -5,3 +5,4 @@ __pycache__*
 *.log
 *.yaml
 .git
+requirements_local.txt
