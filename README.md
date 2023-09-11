@@ -1,6 +1,9 @@
 # travelportals
 Educational project to scrape data from trustable sites and execute over AWS lambda for querying scraped data through the AWS Atena service
 
+# Before you download the source code in your local system, make sure you have git versioning tool installed in your local system.
+# Use below command to download source code from master branch in your local system using git :
+>> git clone --branch master https://github.com/deacademy/travelportals.git
 
 # Install user-agent package to use fake user agents to bypass restrictions ->
 pip install scrapy-user-agents
