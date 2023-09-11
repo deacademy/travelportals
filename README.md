@@ -75,13 +75,6 @@ def get_proxy_url(url):
 ## Athena table schema:->
  # HOTEL_NAME string, RATING string,  REVIEW_LEVEL string, REVIEW_COUNT string, AMENTINIES string, #FEATURES string,  HOTEL_LOCATION string, CONTACT_NUMBER string, NEARLY_LANDMARK_POINTS string, #HOTEL_PAGE_URL string, HOTEL_LISTING_PAGE_URL string
 
-# AWS IAM USER(SCRAPY) CREDENTIAL ->
-# S3_REGION='us-east-1'
-# S3_ACCESS_KEY='AKIAUJJRPC26NSC52DO6'
-# S3_SECRET_KEY='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'
-# S3_BUKCET = 'scrapy-datalake'
-# S3_PReFIX_PATH = 'TripAdvisorHotels/'
-
 <!-- ssh-keygen -t rsa -b 4096 -C "sovan@dataengineeracademy.com" -->
 <!-- git config --local user.name "sovan"
 <!-- git config --local  user.email "sovan@dataengineeracademy.com" --> -->
