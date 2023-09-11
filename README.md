@@ -1,5 +1,5 @@
 # travelportals
-Educational project to scrape data from trustable sites and execute over AWS lambda for analyzing through the AWS Atena service
+Educational project to scrape data from trustable sites and execute over AWS lambda for querying scraped data through the AWS Atena service
 
 
 # Install user-agent package to use fake user agents to bypass restrictions ->
