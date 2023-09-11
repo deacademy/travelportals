@@ -1,6 +1,5 @@
 travelportals_venv
 __pycache__*
-*.md
 *.json
 *.log
 *.yaml
