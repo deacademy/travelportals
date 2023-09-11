@@ -6,7 +6,7 @@ import logging, re
 import os
 
 ## Set default values in environment variable
-os.environ.setdefault('API_KEY', 'sjsddddsd-ab58-4fdc-8664-shachvgvcg')
+os.environ.setdefault('API_KEY', '***********-***-****-****-**********')
 os.environ.setdefault('S3_BUCKET', 'scrapy-datalake')
 os.environ.setdefault('S3_PREFIX_PATH', 'TripAdvisorHotels/')
 os.environ.setdefault('SCRAPE_PAGE_LIMIT', '1')
